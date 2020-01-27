@@ -21,9 +21,9 @@ public class RegisterTest {
     @Test
     public void validRegisterTest() {
        registerSteps.navigateToHomepage();
-        //registerSteps.goToMyAccount();
-        //registerSteps.enterRegistrationCredentials("naty_16259@yahoo.com", "123456855996654");
-        //registerSteps.clickRegister();
+        registerSteps.goToMyAccount();
+        registerSteps.enterRegistrationCredentials("naty_16259@yahoo.com", "123456855996654");
+        registerSteps.clickRegister();
 
 
     }

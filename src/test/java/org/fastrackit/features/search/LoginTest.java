@@ -26,11 +26,11 @@ public class LoginTest {
 
 
         loginSteps.navigateToHomepage();
-        loginSteps.goToLogin();
-        loginSteps.enterCredentials("cosmin@fasttrackit.org","123456");
-        loginSteps.clickLogin();
+      //  loginSteps.goToLogin();
+      //  loginSteps.enterCredentials("cosmin@fasttrackit.org","123456");
+      //  loginSteps.clickLogin();
 
-        loginSteps.checkLoggedIn("Hello, McFlono McFlooney Loo!");
+      //  loginSteps.checkLoggedIn("Hello, McFlono McFlooney Loo!");
     }
 }
 
