@@ -12,6 +12,12 @@ public class HomePage extends PageObject {
     @FindBy(css = ".menu a[href*=\"id=7\"]")
     private WebElementFacade accountLink;
 
+    @FindBy(css= "#menu-item-66 a[href]")
+    private WebElementFacade shopLink;
+
+    public void clickOnShopLink(){
+        clickOn(shopLink);
+    }
 
     // @FindBy(css = "a[title = 'Log In']")
     // private WebElementFacade loginLink;
@@ -20,7 +26,7 @@ public class HomePage extends PageObject {
         clickOn(accountLink);
     }
 
-    // public void clickOnLoginLink(){
+//    public void clickOnLoginLink(){
     // clickOn(loginLink);
 }
 
