@@ -40,19 +40,13 @@ public class MyAccountPage extends PageObject {
     public void clickLogin(){
         clickOn(loginButton);
     }
-    public void clickRegister(){
-        clickOn(registerButton
-        );
-    }
+    public void clickRegister(){ clickOn(registerButton ); }
 
     public void setEmailFieldRegistration(String emailFieldRegistration){
-        typeInto(emailRegistration,emailFieldRegistration);
-
-    }
+        typeInto(emailRegistration,emailFieldRegistration); }
 
 
     public void setPassFieldRegistration(String passFieldRegistration){
-        typeInto(passRegistration,passFieldRegistration);
-    }
+        typeInto(passRegistration,passFieldRegistration);    }
 }
 

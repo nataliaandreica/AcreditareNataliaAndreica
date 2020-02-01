@@ -27,12 +27,14 @@ import org.junit.Assert;
         @Step
         public void enterCredentials(String email, String pass){
             myAccountPage.setEmailField(email);
-            myAccountPage.setPassField(pass);
-        }
+            myAccountPage.setPassField(pass); }
 
         @Step
         public void clickLogin(){
-            myAccountPage.clickLogin();
+            myAccountPage.clickLogin(); }
+        @Step
+        public void goToMyAccount() {
+            homePage.clickAccountLink();
         }
 
         @Step
@@ -43,9 +45,10 @@ import org.junit.Assert;
         @Step
         public void login(String user, String pass){
             navigateToHomepage();
-            goToLogin();
+            goToMyAccount();
             enterCredentials(user,pass);
             clickLogin();
+            checkLoggedIn(user);
         }
     }
 
