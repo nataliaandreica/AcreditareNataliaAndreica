@@ -22,7 +22,7 @@ public class RegisterTest {
     public void validRegisterTest() {
        registerSteps.navigateToHomepage();
        registerSteps.goToMyAccount();
-       registerSteps.enterRegistrationCredentials("nataliaandreica@gmail.com", "123456855996654");
+       registerSteps.enterRegistrationCredentials("nataliaandreica12865@gmail.com", "123456855996654");
        registerSteps.clickRegister();
     }
 }

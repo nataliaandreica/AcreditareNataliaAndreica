@@ -2,6 +2,7 @@ package org.fastrackit.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.fastrackit.pages.DashboardPage;
 import org.fastrackit.pages.HomePage;
 import org.fastrackit.pages.MyAccountPage;
@@ -29,6 +30,12 @@ public class RegisterSteps {
         myAccountPage.setEmailFieldRegistration(emailRegistration);
         myAccountPage.setPassFieldRegistration(passRegistration);
     }
+
+    private String sendkeys(String s) {
+        return s;
+    }
+
+
     @Step
     public void clickRegister(){
         myAccountPage.clickRegister();
