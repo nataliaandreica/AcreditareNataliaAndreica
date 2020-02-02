@@ -24,13 +24,22 @@ public class CartTest {
         private CartSteps cartSteps;
 
         @Test
-    public void addToCartTest(){
+    public void addToCartTestWithLogin(){
             loginSteps.login(Constants.USER_NAME,Constants.USER_PASS);
             cartSteps.goToAllProducts();
             cartSteps.clickOnProduct();
             cartSteps.addProducToCart();
             cartSteps.checkAddedToCart();
+            cartSteps.goToCart();
+            cartSteps.emptyCart();
 
-
+    }
+    @Test
+    public void addToCartTestWithoutLogin(){
+        loginSteps.navigateToHomepage();
+        cartSteps.goToAllProducts();
+        cartSteps.clickOnProduct();
+        cartSteps.addProducToCart();
+        cartSteps.checkAddedToCart();
     }
 }

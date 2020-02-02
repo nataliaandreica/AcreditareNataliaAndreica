@@ -15,6 +15,9 @@ public class HomePage extends PageObject {
     @FindBy(css= "#menu-item-66 a[href]")
     private WebElementFacade shopLink;
 
+    @FindBy(css = ".fa-shopping-cart")
+    private  WebElementFacade shoppingCartLink;
+
     public void clickOnShopLink(){
         clickOn(shopLink);
     }
@@ -26,6 +29,9 @@ public class HomePage extends PageObject {
         clickOn(accountLink);
     }
 
+    public void clickCart(){
+        clickOn(shoppingCartLink);
+    }
 //    public void clickOnLoginLink(){
     // clickOn(loginLink);
 }

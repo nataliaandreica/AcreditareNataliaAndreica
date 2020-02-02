@@ -1,6 +1,7 @@
 package org.fastrackit.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
+import org.fastrackit.pages.CartPage;
 import org.fastrackit.pages.HomePage;
 import org.fastrackit.pages.ProductPage;
 import org.fastrackit.pages.ProductGridPage;
@@ -10,6 +11,7 @@ public class CartSteps {
     private HomePage homePage;
     private ProductGridPage productGridPage;
     private ProductPage productPage;
+    private CartPage cartPage;
 
     @Step
     public void goToAllProducts(){
@@ -29,5 +31,15 @@ public class CartSteps {
     @Step
     public void checkAddedToCart(){
         Assert.assertTrue(productPage.isAddedToCart());
+    }
+    @Step
+    public void goToCart(){
+        homePage.clickCart();
+    }
+
+    @Step
+    public void emptyCart(){
+        cartPage.removeProductsFromCart();
+
     }
 }
