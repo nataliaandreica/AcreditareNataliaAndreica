@@ -11,6 +11,9 @@ public class CartPage extends PageObject {
     @FindBy(className = "remove")
     private List<WebElementFacade> removeButtons;
 
+    @FindBy(css = ".checkout-button")
+    private WebElementFacade proceedToCheckoutButton;
+
     public void removeProductsFromCart() {
         for (int i = 0; i < removeButtons.size(); i++) {
             removeButtons.get(i).click();
@@ -18,9 +21,6 @@ public class CartPage extends PageObject {
         waitABit(5000);
     }
 
-
-    @FindBy(css = ".checkout-button")
-    private WebElementFacade proceedToCheckoutButton;
 
     public void clickProceedToCheckoutButton() {
         clickOn(proceedToCheckoutButton);

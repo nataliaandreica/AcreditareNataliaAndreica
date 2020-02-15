@@ -7,17 +7,20 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 public class ProductPage extends PageObject {
 
-   @FindBy(className="single_add_to_cart_button")
+    @FindBy(className = "single_add_to_cart_button")
     private WebElementFacade addToCartButton;
 
-   @FindBy(className = "woocommerce-message")
-   private WebElementFacade confirmMessage;
+    @FindBy(className = "woocommerce-message")
+    private WebElementFacade confirmMessage;
 
-   private  String text = "has been added to your cart.";
-   public void clickAddToCartButton(){
-       clickOn(addToCartButton);}
+    private String text = "has been added to your cart.";
 
-    public boolean isAddedToCart(){
-       return confirmMessage.containsText(text);}
+    public void clickAddToCartButton() {
+        clickOn(addToCartButton);
+    }
+
+    public boolean isAddedToCart() {
+        return confirmMessage.containsText(text);
+    }
 
 }

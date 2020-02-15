@@ -14,28 +14,29 @@ import org.openqa.selenium.WebDriver;
 
 public class CartTest {
 
-        @Managed(uniqueSession = true)
-        private WebDriver driver;
+    @Managed(uniqueSession = true)
+    private WebDriver driver;
 
-        @Steps
-        private LoginSteps loginSteps;
+    @Steps
+    private LoginSteps loginSteps;
 
-        @Steps
-        private CartSteps cartSteps;
+    @Steps
+    private CartSteps cartSteps;
 
-        @Test
-    public void addToCartTestWithLogin(){
-            loginSteps.login(Constants.USER_NAME,Constants.USER_PASS);
-            cartSteps.goToAllProducts();
-            cartSteps.clickOnProduct();
-            cartSteps.addProducToCart();
-            cartSteps.checkAddedToCart();
-            cartSteps.goToCart();
-            cartSteps.emptyCart();
+    @Test
+    public void addToCartTestWithLogin() {
+        loginSteps.login(Constants.USER_NAME, Constants.USER_PASS);
+        cartSteps.goToAllProducts();
+        cartSteps.clickOnProduct();
+        cartSteps.addProducToCart();
+        cartSteps.checkAddedToCart();
+        cartSteps.goToCart();
+        cartSteps.emptyCart();
 
     }
+
     @Test
-    public void addToCartTestWithoutLogin(){
+    public void addToCartTestWithoutLogin() {
         loginSteps.navigateToHomepage();
         cartSteps.goToAllProducts();
         cartSteps.clickOnProduct();

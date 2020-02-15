@@ -1,4 +1,5 @@
 package org.fastrackit.pages;
+
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -10,10 +11,10 @@ public class MyAccountPage extends PageObject {
     @FindBy(id = "reg_email")
     private WebElementFacade emailRegistration;
 
-    @FindBy (id="reg_password")
+    @FindBy(id = "reg_password")
     private WebElementFacade passRegistration;
 
-    @FindBy (css=".woocommerce-Button[name='register']")
+    @FindBy(css = ".woocommerce-Button[name='register']")
     private WebElementFacade registerButton;
 
     @FindBy(css = ".woocommerce-form-row input#username")
@@ -26,27 +27,30 @@ public class MyAccountPage extends PageObject {
     private WebElementFacade loginButton;
 
 
-
-
-    public void setEmailField(String email){
+    public void setEmailField(String email) {
         waitFor(emailField);
         typeInto(emailField, email);
     }
 
-    public void setPassField(String pass){
+    public void setPassField(String pass) {
         typeInto(passField, pass);
     }
 
-    public void clickLogin(){
+    public void clickLogin() {
         clickOn(loginButton);
     }
-    public void clickRegister(){ clickOn(registerButton ); }
 
-    public void setEmailFieldRegistration(String emailFieldRegistration){
-        typeInto(emailRegistration,emailFieldRegistration); }
+    public void clickRegister() {
+        clickOn(registerButton);
+    }
+
+    public void setEmailFieldRegistration(String emailFieldRegistration) {
+        typeInto(emailRegistration, emailFieldRegistration);
+    }
 
 
-    public void setPassFieldRegistration(String passFieldRegistration){
-        typeInto(passRegistration,passFieldRegistration);    }
+    public void setPassFieldRegistration(String passFieldRegistration) {
+        typeInto(passRegistration, passFieldRegistration);
+    }
 }
 

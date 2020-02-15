@@ -13,8 +13,8 @@ public class DashboardPage extends PageObject {
     @FindBy(css = ".woocommerce-MyAccount-content p:first-child")
     private WebElementFacade helloTextParagraph;
 
-    public boolean checkHelloText(String text){
-        return helloTextParagraph.containsOnlyText("Hello "+text+" (not "+text+"? Log out)");
+    public boolean checkHelloText(String text) {
+        return helloTextParagraph.containsOnlyText("Hello " + text + " (not " + text + "? Log out)");
     }
 
 }
