@@ -52,7 +52,7 @@ public class CheckoutPage extends PageObject {
         clickOn(placeOrderButton);
     }
 
-    private String text = "Thank you. Your order has been received.";
+    private String text = "Thank you.";
 
     public boolean isCompleteeTheOrder() {
         return confirmationMessage.containsText(text);

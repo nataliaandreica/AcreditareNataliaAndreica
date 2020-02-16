@@ -30,7 +30,7 @@ public class CheckoutSteps {
     }
 
     @Step
-    public void checkConfirmedOrder(){
+    public void checkConfirmedOrder(String text){
         Assert.assertTrue(checkoutPage.isCompleteeTheOrder());
     }
 }

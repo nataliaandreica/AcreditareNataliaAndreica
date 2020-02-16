@@ -12,8 +12,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-
-public class SortTest {
+public class SortByPriceDescendingTest {
 
     @Managed(uniqueSession = true)
     private WebDriver driver;
@@ -36,7 +35,7 @@ public class SortTest {
     public void checkSortByPriceFunction(){
         loginSteps.navigateToHomepage();
         homePage.clickOnShopLink();
-        sortProductsSteps.sortByPrice();
-        sortProductsSteps.checkPriceAscending();
+        sortProductsSteps.sortByPriceI();
+        sortProductsSteps.checkPriceDescending();
     }
 }

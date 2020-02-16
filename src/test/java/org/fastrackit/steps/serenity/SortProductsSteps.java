@@ -16,8 +16,8 @@ public class SortProductsSteps {
 
     }
     @Step
-    public void sortByPopularity(){
-        productGridPage.selectFromDropdown("Sort by popularity");
+    public void sortByPriceI(){
+        productGridPage.selectFromDropdown("Sort by price: high to low");
     }
 
     @Step
@@ -26,7 +26,11 @@ public class SortProductsSteps {
     }
     @Step
     public void checkPriceAscending(){
-        Assert.assertTrue(productGridPage.checkProductsPrices());
+        Assert.assertTrue(productGridPage.checkProductsPricesLowToHigh());
+    }
+    @Step
+    public void checkPriceDescending(){
+        Assert.assertTrue(productGridPage.checkProductsPricesHighToLow());
     }
 
 

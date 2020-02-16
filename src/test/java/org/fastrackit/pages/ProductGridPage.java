@@ -30,7 +30,7 @@ public class ProductGridPage extends PageObject {
         topSortByDropdown.selectByVisibleText(text);
     }
 
-    public boolean checkProductsPrices() {
+    public boolean checkProductsPricesLowToHigh() {
         int priceCurrent;
         int priceNext;
         for (int i = 0; i <= listOfProducts.size() - 2; i++) {
@@ -48,6 +48,33 @@ public class ProductGridPage extends PageObject {
                 System.out.println("INt de i : " + i);
 
                 if (priceCurrent > priceNext) {
+                    return false;
+                }
+            } catch (NoSuchElementException e) {
+                continue;
+            }
+        }
+        return true;
+    }
+
+    public boolean checkProductsPricesHighToLow() {
+        int priceCurrent;
+        int priceNext;
+        for (int i = 0; i <= listOfProducts.size() - 2; i++) {
+            try {
+                String priceI = listOfProducts.get(i)
+                        .findBy(By.cssSelector(".item-prod-wrap.wow:not(.sale)"))
+                        .getText().replace(",00 lei", "").trim();
+                priceCurrent = Integer.valueOf(priceI);
+
+                String priceI2 = listOfProducts.get(i + 1)
+                        .findBy(By.cssSelector(".item-prod-wrap.wow:not(.sale)"))
+                        .getText().replace(",00 lei", "").trim();
+                priceNext = Integer.valueOf(priceI2);
+
+                System.out.println("INt de i : " + i);
+
+                if (priceCurrent < priceNext) {
                     return false;
                 }
             } catch (NoSuchElementException e) {
