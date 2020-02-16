@@ -18,12 +18,14 @@ public class HomePage extends PageObject {
     @FindBy(css = ".fa-shopping-cart")
     private  WebElementFacade shoppingCartLink;
 
+    @FindBy(css=".fa-search")
+    private WebElementFacade searchButton;
+
+
+
     public void clickOnShopLink(){
         clickOn(shopLink);
     }
-
-    // @FindBy(css = "a[title = 'Log In']")
-    // private WebElementFacade loginLink;
 
     public void clickAccountLink(){
         clickOn(accountLink);
@@ -32,8 +34,9 @@ public class HomePage extends PageObject {
     public void clickCart(){
         clickOn(shoppingCartLink);
     }
-//    public void clickOnLoginLink(){
-    // clickOn(loginLink);
+
+
+    public void clickSearchButton(){clickOn (searchButton);}
 }
 
 

@@ -43,4 +43,7 @@ public class CartTest {
         cartSteps.addProducToCart();
         cartSteps.checkAddedToCart();
     }
+
+    public static class CartWithLoginTest {
+    }
 }
