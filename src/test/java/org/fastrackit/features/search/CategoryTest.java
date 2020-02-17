@@ -17,7 +17,6 @@ public class CategoryTest {
 
     @Managed(uniqueSession = true)
     private WebDriver driver;
-
     @Steps
     private LoginSteps loginSteps;
 
